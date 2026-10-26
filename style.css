@@ -1,0 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background:
+        radial-gradient(circle at top left, #172554 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #3b0764 0%, transparent 40%),
+        #080b18;
+    color: #f8fafc;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.game-card {
+    width: 100%;
+    max-width: 470px;
+    padding: 38px 30px;
+    text-align: center;
+    border: 1px solid #334155;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.88);
+    box-shadow:
+        0 0 35px rgba(34, 211, 238, 0.08),
+        0 20px 70px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-bottom: 22px;
+    border: 1px solid #164e63;
+    border-radius: 30px;
+    background: #083344;
+    color: #67e8f9;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(25px, 6vw, 34px);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+h1 span {
+    color: #22d3ee;
+}
+
+.subtitle {
+    margin-top: 12px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.number-display {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 22px;
+    border: 2px solid #22d3ee;
+    border-radius: 50%;
+    background: radial-gradient(circle, #164e63, #0f172a 70%);
+    box-shadow:
+        0 0 18px rgba(34, 211, 238, 0.3),
+        inset 0 0 20px rgba(34, 211, 238, 0.12);
+    color: #67e8f9;
+    font-family: 'Orbitron', monospace;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.range {
+    margin-bottom: 18px;
+    color: #94a3b8;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+#guess-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    outline: none;
+    background: #080b18;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #22d3ee;
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.15);
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0891b2, #6366f1);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(34, 211, 238, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#message {
+    min-height: 24px;
+    margin: 22px 0;
+    color: #67e8f9;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    padding: 18px 5px;
+    border-top: 1px solid #253047;
+    border-bottom: 1px solid #253047;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.stats strong {
+    color: #e2e8f0;
+    font-family: 'Orbitron', monospace;
+    font-size: 18px;
+}
+
+.restart {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #334155;
+    background: transparent;
+    color: #cbd5e1;
+}
+
+.restart:hover {
+    background: #1e293b;
+}
+
+@media (max-width: 400px) {
+    .game-card {
+        padding: 30px 18px;
+    }
+
+    .number-display {
+        width: 105px;
+        height: 105px;
+        font-size: 40px;
+    }
+}
